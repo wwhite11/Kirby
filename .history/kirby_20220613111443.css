@@ -1,0 +1,225 @@
+/* Defined colors that will be needed for Kirby */
+:root {
+    --pink: #ff9ec8;
+    --deep-pink: #f20079;
+    --shadow: #cb91b2;
+    --cheek: #e5649c;
+}
+
+/* The body part of Kirby, a big round blob */
+.kirby{
+    width: 500px;
+    height: 432px;
+    background: var(--pink);
+    position: absolute;
+    border-radius: 50%;
+    border: 1rem solid black;
+}
+
+/* Creating A shadow shape underneath Kirby */
+.kirby::before{
+    content: '';
+    width: 118%;
+    height: 13.8%;
+    background: var(--shadow);
+    position: absolute;
+    bottom: -10%;
+    border-radius: 50%;
+    z-index: -2;
+    left: -7%;
+}
+
+/* Creating a custom style for the left arm */
+ .arm-left{
+    width: 31%;
+    height: 32%;
+    background: var(--pink);
+    position: relative;
+    top: 44%;
+    border-radius: 50% 40%;
+    transform: rotate(342deg);
+    border: 1rem solid black;
+    left: -13.5%;
+ }
+
+ /* Using the before element for the left arm to offset it to the 
+ background */
+ .arm-left::before{
+    content: '';
+    width: 70%;
+    height: 150%;
+    border-radius: 50%;
+    background: var(--pink);
+    position: absolute;
+    left: 47%;
+    top: -25%;  
+ }
+ 
+ /* Creating a custom style for the right arm */
+ .arm-right{
+    width: 31%;
+    height: 32%;
+    background: var(--pink);
+    position: relative;
+    top: 2%;
+    border-radius: 50% 40%;
+    transform: rotate(215deg);
+    border: 1rem solid black;
+    right: -75%;
+    z-index: -1;
+ }
+
+ .foot-left{
+     position: absolute;
+     width: 40%;
+     height: 18%;
+     background: var(--deep-pink);
+     border-radius: 44% 56% 63% 37% / 78% 59% 41% 22%;
+     left: 1%;
+     bottom: -6.5%;
+     border: 1rem solid black;
+     z-index: -1;
+ }
+
+ .foot-right{
+     position: absolute;
+     width: 40%;
+     height: 18%;
+     background: var(--deep-pink);
+     border-radius: 42% 58% 35% 65% / 54% 82% 18% 46%;
+     right: -2%;
+     bottom: -4%;
+     border: 1rem solid black;
+     z-index: -1;
+ }
+
+ .mouth{
+    position: absolute;
+  top: 52%;
+  left: 63%;
+  width: 2.5em;
+  height: 1.5em;
+  transform: translateX(-50%);
+  color: #000;
+  border: 0.625rem solid transparent;
+  border-top-color: currentColor;
+  border-radius: 41%;
+  transform: rotate(352deg);
+ }
+ 
+ .mouth::after{
+     content: '';
+     position: absolute;
+     width: 143%;
+     height: 120%;
+     background: var(--cheek);
+     border-radius: 50%;
+     right: -300%;
+     transform: rotate(353deg);
+     top: -170%;
+    
+ }
+
+ .eye{
+     position: absolute;
+     background: black ;
+ }
+
+ .eye-left{
+     width: 10%;
+     height: 28%;
+     border-radius: 50%;
+     top: 21%;
+     left: 49.5;
+     transform: rotate(351deg);
+ }
+
+ .eye-left::after{
+     transform: rotate(33deg);
+     content: '';
+     width: 190%;
+     height: 1rem;
+     background: var(--pink);
+     position: absolute;
+     top: -4%;
+     left: -38%;
+     z-index: 1;
+ }
+
+ .eye-left::before{
+     content: '';
+     width: 168%;
+     height: 0.75rem;
+     background: black;
+     position: absolute;
+     border-radius: 30%;
+     z-index: 9;
+     transform: rotate(33deg);
+     top: 0.625rem;
+     left: -28%;
+ }
+
+ .eye-right{
+     width: 9%;
+     height: 27%;
+     border-radius: 50%;
+     top: 19%;
+     left: 67.5%;
+     transform: rotate(348deg);
+ }
+
+ .eye-right::after{
+     transform: rotate(327deg);
+     content: '';
+     width: 190%;
+     height: 1rem;
+     background: var(--pink);
+     position: absolute;
+     top: -4%;
+     left: -37%;
+ }
+
+ .eye-right::before{
+     content: '';
+     width: 169%;
+     height: 0.75rem;
+     background: black;
+     position: absolute;
+     border-radius: 30%;
+     z-index: 9;
+     transform: rotate(327deg);
+     top: 6%;
+     left: -26%;
+ }
+
+ .inner{
+     width: 60%;
+     height: 56%;
+     background: #000;
+     border-radius: 50%;
+     position: absolute;
+     top: 25%;
+     left: 19%;
+ }
+
+ .inner::before{
+    content: '';
+    position: absolute;
+    width: 105%;
+    height: 100%;
+    background: #0164c7;
+    border-radius: 50%;
+    bottom: -20%;
+    z-index: -1;
+ }
+
+ .inner::after{
+    content: '';
+    position: absolute;
+    width: 105%;
+    height: 102%;
+    background: white;
+    border-radius: 50%;
+    top: -34%;
+    z-index: 0;
+ }

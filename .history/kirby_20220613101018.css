@@ -1,0 +1,30 @@
+/* Defined colors that will be needed for Kirby */
+:root {
+    --pink: #ff9ec8;
+    --deep-pink: #f20079;
+    --shadow: #cb91b2;
+    --cheek: #e5649c;
+}
+
+/* The body part of Kirby, a big round blob */
+
+.kirby{
+    width: 500px;
+    height: 432px;
+    background: var(--pink);
+    position: absolute;
+    border-radius: 50%;
+    border: 1rem solid black;
+}
+
+.kirby::before{
+    content: '';
+    width: 118%;
+    height: 13.8%;
+    background: var(--shadow);
+    position: absolute;
+    bottom: -10%;
+    border-radius: 50%;
+    z-index: -2;
+    left: -7%;
+}

@@ -1,0 +1,54 @@
+/* Defined colors that will be needed for Kirby */
+:root {
+    --pink: #ff9ec8;
+    --deep-pink: #f20079;
+    --shadow: #cb91b2;
+    --cheek: #e5649c;
+}
+
+/* The body part of Kirby, a big round blob */
+.kirby{
+    width: 500px;
+    height: 432px;
+    background: var(--pink);
+    position: absolute;
+    border-radius: 50%;
+    border: 1rem solid black;
+}
+
+/* Creating A shadow shape underneath Kirby */
+.kirby::before{
+    content: '';
+    width: 118%;
+    height: 13.8%;
+    background: var(--shadow);
+    position: absolute;
+    bottom: -10%;
+    border-radius: 50%;
+    z-index: -2;
+    left: -7%;
+}
+
+ .arm.left{
+    width: 31%;
+    height: 32%;
+    background: var(--pink);
+    position: relative;
+    top: 44%;
+    border-radius: 50% 40%;
+    transform: rotate(342deg);
+    border: 1rem solid black;
+    left: -13.5%;
+ }
+ 
+ .arm.left::before{
+    content: '';
+    width: 70%;
+    height: 150%;
+    border-radius: 50%;
+    background: var(--pink);
+    position: absolute;
+    left: 47%;
+    top: -25%;
+ }
+  

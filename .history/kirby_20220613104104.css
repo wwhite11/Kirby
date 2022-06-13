@@ -1,0 +1,78 @@
+/* Defined colors that will be needed for Kirby */
+:root {
+    --pink: #ff9ec8;
+    --deep-pink: #f20079;
+    --shadow: #cb91b2;
+    --cheek: #e5649c;
+}
+
+/* The body part of Kirby, a big round blob */
+.kirby{
+    width: 500px;
+    height: 432px;
+    background: var(--pink);
+    position: absolute;
+    border-radius: 50%;
+    border: 1rem solid black;
+}
+
+/* Creating A shadow shape underneath Kirby */
+.kirby::before{
+    content: '';
+    width: 118%;
+    height: 13.8%;
+    background: var(--shadow);
+    position: absolute;
+    bottom: -10%;
+    border-radius: 50%;
+    z-index: -2;
+    left: -7%;
+}
+
+/* Creating a custom style for the left arm */
+ .arm-left{
+    width: 31%;
+    height: 32%;
+    background: var(--pink);
+    position: relative;
+    top: 44%;
+    border-radius: 50% 40%;
+    transform: rotate(342deg);
+    border: 1rem solid black;
+    left: -13.5%;
+ }
+
+ /* Using the before element for the left arm to offset it to the 
+ background */
+ .arm-left::before{
+    content: '';
+    width: 70%;
+    height: 150%;
+    border-radius: 50%;
+    background: var(--pink);
+    position: absolute;
+    left: 47%;
+    top: -25%;  
+ }
+ 
+ /* Creating a custom style for the right arm */
+ .arm-right{
+    width: 31%;
+    height: 32%;
+    background: var(--pink);
+    position: relative;
+    top: 2%;
+    border-radius: 50% 40%;
+    transform: rotate(215deg);
+    border: 1rem solid black;
+    right: -75%;
+    z-index: -1;
+ }
+
+ .foot-left{
+     position: absolute;
+     width: 40%;
+     height: 18%;
+     background: var(--deep-pink);
+     border-radius: 44% 56% 63% 37% / 78% 59% 41% 22%;
+ }
